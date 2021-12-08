@@ -43,6 +43,7 @@ func teamResource() *schema.Resource {
 		Read:          TeamRead,
 		Update:        TeamUpdate,
 		Delete:        TeamDelete,
+		Importer:      &schema.ResourceImporter{State: schema.ImportStatePassthrough},
 		SchemaVersion: 1,
 		StateUpgraders: []schema.StateUpgrader{
 			{

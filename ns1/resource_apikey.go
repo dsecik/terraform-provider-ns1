@@ -43,6 +43,7 @@ func apikeyResource() *schema.Resource {
 		Read:          ApikeyRead,
 		Update:        ApikeyUpdate,
 		Delete:        ApikeyDelete,
+		Importer:      &schema.ResourceImporter{State: schema.ImportStatePassthrough},
 		SchemaVersion: 1,
 		StateUpgraders: []schema.StateUpgrader{
 			{
